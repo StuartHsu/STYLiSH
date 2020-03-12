@@ -1,0 +1,29 @@
+@import "normalize.css";
+
+main .view {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 980px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+main .profile {
+  font-size: 1.5em;
+  margin: 200px 0;
+}
+
+@media (max-width: 1000px) {
+
+  main .view {
+    margin-top: 80px;
+  }
+
+  main .profile {
+    font-size: 1.2em;
+    margin: 100px 0;
+  }
+
+}

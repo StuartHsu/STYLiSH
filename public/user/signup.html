@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>Sign Up Page</title>
+      <link rel="stylesheet" type="text/css" href="../stylesheets/userSign.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <!-- 塞個東西讓上面可以均分 -->
+      <div class="logo">
+        <a href=".././">
+          <img src="../imgs/logo.png" alt="logo">
+        </a>
+      </div>
+
+    </header>
+
+    <nav class="rwd-feature"></nav>
+
+    <main>
+
+      <div class="view">
+
+        <div class="signin">
+
+          <h3>會員註冊</h3>
+          <div class="login" id="login">
+            <form class="form" action="/user/signup" method="POST">
+              <div class="form-group">
+                <label for="id">Name:</label>
+                <input type="text" class="form-control" name="name" id="name" required="required">
+              </div>
+              <div class="form-group">
+                <label for="title">Email:</label>
+                <input type="email" class="form-control" name="email" id="email" required="required">
+              </div>
+              <div class="form-group">
+                <label for="description">Password:</label>
+                <input type="password" class="form-control" name="password" id="password" required="required">
+              </div>
+              <div class="button-group">
+                <input type="submit" class="button" value="Sign Up">
+                <!-- <a href="/user/signin.html" class="button">Sign In</a> -->
+              </div>
+              <a href="/user/signin.html" class="link">Sign In</a>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="view">
+        <div class="link part-1">
+          <div class="item">關於 Stylish</div>
+          <div class="item">服務條款</div>
+          <div class="item">隱私政策</div>
+        </div>
+        <div class="link part-2">
+          <div class="item">聯絡我們</div>
+          <div class="item">FAQ</div>
+        </div>
+        <div class="social">
+          <img src="../imgs/line.png">
+          <img src="../imgs/twitter.png">
+          <img src="../imgs/facebook.png">
+        </div>
+        <div class="copyright">&copy; 2018.  All rights reserved.</div>
+      </div>
+    </footer>
+
+  </body>
+
+</html>

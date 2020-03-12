@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>Sign In Page</title>
+        <link rel="stylesheet" type="text/css" href="../stylesheets/userSign.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <!-- 塞個東西讓上面可以均分 -->
+      <div class="logo">
+        <a href=".././">
+          <img src="../imgs/logo.png" alt="logo">
+        </a>
+      </div>
+
+    </header>
+
+    <nav class="rwd-feature"></nav>
+
+    <main>
+
+      <div class="view">
+
+        <div class="signin">
+
+          <h3>會員登錄</h3>
+          <div class="login" id="login">
+            <form class="form" action="/user/member" method="POST">
+              <div class="form-group">
+                <label for="id">Name:</label>
+                <input type="text" class="form-control" name="name" id="name" required="required">
+              </div>
+              <div class="form-group">
+                <label for="title">Email:</label>
+                <input type="email" class="form-control" name="email" id="email" required="required">
+              </div>
+              <div class="form-group">
+                <label for="description">Password:</label>
+                <input type="password" class="form-control" name="password" id="password" required="required">
+              </div>
+              <div class="button-group">
+                <!-- <a href="/user/signup.html" class="button">Sign Up</a> -->
+                <input type="submit" class="button" value="Sign In">
+                <input type="button" class="button" id="loginFB" onclick="fbLogIn()" value="Log In With Facebook">
+              </div>
+              <a href="/user/signup.html" class="link">Sign Up</a>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="view">
+        <div class="link part-1">
+          <div class="item">關於 Stylish</div>
+          <div class="item">服務條款</div>
+          <div class="item">隱私政策</div>
+        </div>
+        <div class="link part-2">
+          <div class="item">聯絡我們</div>
+          <div class="item">FAQ</div>
+        </div>
+        <div class="social">
+          <img src="../imgs/line.png">
+          <img src="../imgs/twitter.png">
+          <img src="../imgs/facebook.png">
+        </div>
+        <div class="copyright">&copy; 2018.  All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script>
+
+      var person = { userID: "", accessToken: ""};
+
+      function fbLogIn() {
+        FB.login(function (response) {
+          if (response.status === "connected") {
+            person.userID = response.authResponse.userID;
+            person.accessToken = response.authResponse.accessToken;
+
+            // AJAX send data to backend
+            $.ajax({
+              url: "signin.html",
+              method: "POST",
+              data: person,
+              dataType: 'json',
+              success: function (serverResponse) {
+                $("#login").hide();
+                var data = {
+                  provider: serverResponse.provider,
+                  access_token: serverResponse.access_token
+                }
+                document.getElementById("status").innerHTML = JSON.stringify(serverResponse);
+              }
+            });
+          }
+        }, {scope: 'public_profile, email'});
+      }
+
+      window.fbAsyncInit = function() {
+        FB.init({
+        appId: '486010038697948', // 填入 FB APP ID
+        cookie: true,
+        xfbml: true,
+        version: 'v5.0'
+        });
+      };
+
+
+      // 載入 FB SDK
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/zh_TW/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+  </body>
+
+</html>

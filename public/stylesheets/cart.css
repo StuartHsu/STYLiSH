@@ -1,0 +1,128 @@
+body {
+  font-size: 16px;
+  font-family: "Noto Sans TC", "微軟正黑體", "新細明體", arial, sans-serif;
+  color: #3f3a3a;
+}
+
+#tappay-iframe {
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    margin: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    tap-highlight-color: rgba(255,255,255,0);
+    line-height: 1.21428571em;
+    padding: .578571em 1em;
+    font-size: 1em;
+    background: #fff;
+    border: 1px solid rgba(34,36,38,.15);
+    color: rgba(0,0,0,.87);
+    border-radius: .28571429rem;
+    box-shadow: 0 0 0 0 transparent inset;
+    -webkit-transition: color .1s ease,border-color .1s ease;
+    transition: color .1s ease,border-color .1s ease;
+    width: 100%;
+}
+
+/* STYLiSH */
+
+main {
+  padding: 20px 10px;
+}
+
+main>.view {
+  max-width: 980px;
+}
+
+.view {
+  width: 100%;
+  margin: 0px auto;
+}
+
+main .recipient, main .payment {
+    margin-bottom: 30px;
+}
+
+main .recipient>.title, main .payment>.title {
+    font-weight: bold;
+    border-bottom: 1px solid #3f3a3a;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+main .recipient>.line, main .payment>.line {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+main .recipient>.line>.text, main .payment>.line>.text {
+    flex: none;
+    width: 150px;
+}
+
+main .recipient>.line>.input, main .payment>.line>.input {
+    flex: auto;
+}
+
+main .recipient>.line>.input>input {
+    padding: 5px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #979797;
+}
+
+main .recipient>.line>.input>label {
+  margin-right: 10px;
+}
+
+input[type="radio" i] {
+  background-color: initial;
+  cursor: default;
+  -webkit-appearance: radio;
+  box-sizing: border-box;
+  margin: 3px 0.5ex;
+  padding: initial;
+  border: initial;
+}
+
+input, select, img {
+  vertical-align: middle;
+}
+
+main .recipient>.line>.input>label>.time {
+    vertical-align: middle;
+}
+
+main .payment>.line>.input>.tpfield {
+    height: 30px;
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #979797;
+    border-radius: 4px;
+}
+
+main .confirm {
+    margin-bottom: 20px;
+    padding-top: 30px;
+    border-top: 1px solid #3f3a3a;
+}
+
+main .confirm>.row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+main .confirm>.row>button {
+    width: 240px;
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #979797;
+    letter-spacing: 4px;
+    font-size: inherit;
+    cursor: pointer;
+}

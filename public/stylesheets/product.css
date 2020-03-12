@@ -1,0 +1,279 @@
+@import "normalize.css";
+
+/* main */
+
+main {
+  padding: 20px 0;
+}
+
+main .view {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 980px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+main .view .main-image {
+  width: 50%;
+  margin: 2%;
+}
+
+main .view .main-image img {
+  width: 100%;
+}
+
+main .view .details {
+  width: 40%;
+  margin: 2%;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+main .details .name {
+  letter-spacing: 6px;
+  font-size: 1.2em;
+}
+
+main .details .id {
+  letter-spacing: 3px;
+  color: #bababa;
+  margin: 5px 0 20px 0;
+}
+
+main .details .price {
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #3f3a3a;
+}
+
+main .details .colors {
+  margin-bottom: 20px;
+}
+
+main .details .colors .title {
+  display: inline-block;
+  margin-right: 10px;
+  width: 70px;
+  vertical-align: middle;
+}
+
+main .details .colors .color {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  border: 4px solid #fff;
+  box-shadow: 0px 0px 1px #bbbbbb;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+main .details .sizes {
+  margin-bottom: 20px;
+}
+
+main .details .sizes .title {
+  display: inline-block;
+  margin-right: 10px;
+  width: 70px;
+  vertical-align: middle;
+}
+
+main .details .sizes .size {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+  text-align: center;
+  background-color: #ececec;
+}
+
+main .details .qty .title {
+  display: inline-block;
+  margin-right: 10px;
+  width: 70px;
+  vertical-align: middle;
+}
+
+main .details .qty .qty-adjust {
+  display: inline-flex;
+  border: 1px solid #979797;
+  width: 150px;
+  padding: 5px;
+}
+
+main .details .qty .qty-adjust .operator {
+  width: 30px;
+  text-align: center;
+  flex: 1;
+}
+
+main .details .qty .qty-adjust .value {
+  flex: 3;
+  text-align: center;
+}
+
+main .details .add-cart {
+  margin: 30px 0;
+}
+
+main .details .add-cart button {
+  width: 300px;
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  background-color: #000;
+  letter-spacing: 4px;
+}
+
+main .separator-line {
+  display: flex;
+  align-items: center;
+  width: 94%;
+  margin: 30px 0;
+}
+
+main .separator-line .title {
+  color: #8b572a;
+  width: 150px;
+
+}
+
+main .separator-line .line {
+  display: block;
+  height: 1px;
+  background: #3f3a3a;
+  flex: 1;
+}
+
+main .description {
+  width: 94%;
+}
+
+main .description .story {
+  margin-bottom: 20px;
+}
+
+main .description .images img {
+  width: 100%;
+  max-width: 960px;
+  margin-bottom: 30px;
+}
+
+
+/* payment */
+
+main .view .payment {
+  width: 100%;
+  margin: 0 3%;
+  padding: 1%;
+  background-color: #f6f8fa;  
+}
+
+main .payment .title {
+    font-weight: bold;
+    border-bottom: 1px solid #3f3a3a;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+main .payment .line {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+main .payment .line .text {
+    flex: none;
+    width: 150px;
+}
+
+main .payment .line .input {
+    flex: auto;
+}
+
+main .payment .line .input .tpfield {
+    height: 30px;
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #979797;
+    border-radius: 4px;
+}
+
+main .confirm {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #3f3a3a;
+}
+
+main .confirm .row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+main .view .payment button {
+    width: 240px;
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #979797;
+    letter-spacing: 4px;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1000px) {
+
+  main .view {
+    margin-top: 102px;
+  }
+
+  main .view .details {
+    font-size: 16px;
+    line-height: 1.3em;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  main .view .main-image {
+    width: 100%;
+    margin: 0;
+  }
+
+  main .view .details {
+    width: 95%;
+    margin: 2%;
+    margin-top: 20px;
+  }
+
+  main .details .qty .title {
+    display: none;
+  }
+
+  main .details .qty .qty-adjust {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 5px;
+  }
+
+  main .details .add-cart button {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+
+}

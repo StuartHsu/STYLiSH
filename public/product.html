@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>Stylish 產品資訊</title>
+      <link rel="stylesheet" type="text/css" href="stylesheets/product.css">
+      <script src="js/lib.js"></script>
+      <script src="js/products.js"></script>
+      <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- 塞個東西讓上面可以均分 -->
+      <div class="padding-rwd"></div>
+      <div class="logo">
+        <a href="./">
+          <img src="imgs/logo.png" alt="logo">
+        </a>
+      </div>
+      <nav>
+        <div class="item">
+          <a href="./?tag=women">女裝</a>
+        </div>
+        <div class="item">
+          <a href="./?tag=men">男裝</a>
+        </div>
+        <div class="item">
+          <a href="./?tag=accessories">配件</a>
+        </div>
+      </nav>
+      <div class="feature">
+        <form action="./" class="item">
+          <input type="text" class="search" name="tag">
+        </form>
+        <div class="item cart">
+          <img src="imgs/shopping-cart.png" alt="shopping-cart">
+        </div>
+        <a class="item member" href="./user/profile.html">
+          <img src="imgs/member.png" alt="member">
+        </a>
+      </div>
+
+    </header>
+
+    <nav class="rwd-feature">
+      <div class="item">
+        <a href="./?tag=women">女裝</a>
+      </div>
+      <div class="item">
+        <a href="./?tag=men">男裝</a>
+      </div>
+      <div class="item">
+        <a href="./?tag=accessories">配件</a>
+      </div>
+    </nav>
+
+    <main>
+
+      <div class="view" id="productsDetail">
+
+        <div id="product-main-image" class="main-image">
+          <!-- <img src="assets/201902191242/main.jpg"> -->
+        </div>
+        <div class="details" id="details">
+          <!-- <div id="product-name" class="name">前叉</div>
+          <div id="product-id" class="id">123</div>
+          <div id="product-price" class="price">TWD.799</div>
+          <div id="product-color" class="colors">
+            <span class="title">顏色 &nbsp; |</span>
+            <div class="color" style="background-color: rgb(221, 255,187);"></div>
+            <div class="color" style="background-color: rgb(221, 255,187);"></div>
+            <div class="color" style="background-color: rgb(221, 255,187);"></div>
+          </div>
+          <div id="product-sizes" class="sizes">
+            <span class="title">尺寸 &nbsp; |</span>
+            <div class="size">S</div>
+            <div class="size">M</div>
+            <div class="size">L</div>
+          </div>
+          <div id="product-qty" class="qty">
+            <span class="title">數量 &nbsp; |</span>
+            <div id="qty-adjust" class="qty-adjust">
+              <div class="operator">-</div>
+              <div class="value">1</div>
+              <div class="operator">+</div>
+            </div>
+          </div>
+          <div class="add-cart">
+            <button>加入購物車</button>
+          </div>
+          <div id="product-info" class="info">實品顏色依單品照為主<br><br>棉 100%<br>厚薄：薄<br>彈性：無<br><br>清洗：手洗，溫水<br>產地：中國</div> -->
+        </div>
+
+        <div class="payment">
+
+          <div class="title">付款資料</div>
+          <div class="line">
+            <div class="text">信用卡號碼</div>
+            <div class="input">
+              <div class="tpfield" id="card-number"></div>
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="text">有效期限</div>
+            <div class="input">
+              <div class="tpfield" id="card-expiration-date"></div>
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="text">安全碼</div>
+            <div class="input">
+              <div class="tpfield" id="card-ccv"></div>
+            </div>
+          </div>
+
+          <div class="confirm">
+            <div class="row">
+              <button id="checkout">確認付款</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="separator-line" id="separator-line">
+          <!-- <div class="title">更多產品資訊</div>
+          <div class="line"></div> -->
+        </div>
+
+        <div class="description" id="description">
+          <!-- <div class="story" id="product-story">O.N.S is all about options, which is why we took our staple polo shirt and upgraded it with slubby linen jersey, making it even lighter for those who prefer their summer style extra-breezy.</div>
+          <div class="images" id="product-images">
+            <img src="assets/201902191242/0.jpg">
+            <img src="assets/201902191242/1.jpg">
+          </div> -->
+        </div>
+
+      </div>
+
+
+
+    </main>
+
+    <footer>
+      <div class="view">
+        <div class="link part-1">
+          <div class="item">關於 Stylish</div>
+          <div class="item">服務條款</div>
+          <div class="item">隱私政策</div>
+        </div>
+        <div class="link part-2">
+          <div class="item">聯絡我們</div>
+          <div class="item">FAQ</div>
+        </div>
+        <div class="social">
+          <img src="imgs/line.png">
+          <img src="imgs/twitter.png">
+          <img src="imgs/facebook.png">
+        </div>
+        <div class="copyright">&copy; 2018.  All rights reserved.</div>
+      </div>
+    </footer>
+
+  </body>
+  <script src="https://js.tappaysdk.com/tpdirect/v5.1.0"></script>
+  <script>
+    // 1. Load TapPay SDK.
+    TPDirect.setupSDK(12348, 'app_pa1pQcKoY22IlnSXq5m5WP5jFKzoRG58VEXpT7wU62ud7mMbDOGzCYIlzzLF', 'sandbox')
+  </script>
+  <script src="/js/productCheckout.js"></script>
+
+
+</html>

@@ -1,0 +1,138 @@
+@import "normalize.css";
+
+main {
+  text-align: center;
+}
+
+main .view {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 980px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+main .signin {
+  font-size: 1.5em;
+  margin: 50px 0 90px 0;
+}
+
+main .login h2 {
+  font-size: 1.3em;
+  margin: 10px 0 30px 0;
+}
+
+main .login {
+  width: 300px;
+  padding: 20px 30px;
+  background: #f6f8fa;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+main .form {
+  width: 90%;
+}
+
+main .form-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+main .form-group label {
+  font-size: 1em;
+}
+
+main .form-control {
+  width: 300px;
+  border: 1px solid gray;
+}
+
+main .form-group input {
+  width: 60%;
+  border-radius: 5px;
+}
+
+main .form-group textarea {
+  width: 60%;
+  border-radius: 5px;
+}
+
+main .button-group {
+  text-align: center;
+}
+
+main .button {
+  font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: white;
+  background: #384047;
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 4px 15px;
+  border: 1px solid #384047;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 0 #384047;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: 0.3s;
+}
+
+main .button:hover {
+  background: #8d9aa5;
+  border-color: #8d9aa5;
+  box-shadow: 0 2px 0 0 #8d9aa5;
+}
+
+main .login .form a {
+  font-size: .4em;
+}
+
+main .form {
+  text-align: center;
+}
+
+main .form .link {
+  text-decoration: underline;
+}
+
+main .form .uploadImage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+main .form .uploadImage .image {
+  border: none;
+  margin-bottom: 20px;
+}
+
+/* main .variant {
+  margin: 30px 0;
+} */
+
+main select {
+  width: 61%;
+}
+
+main textarea {
+  height: 200px;
+}
+
+@media (max-width: 1000px) {
+
+  main .view {
+    margin-top: 80px;
+  }
+
+  main .signin {
+    font-size: 1.2em;
+    margin: 100px 0;
+  }
+
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>Campaign Management Page</title>
+      <!-- <link rel="stylesheet" href="../stylesheets/style.css"> -->
+      <link rel="stylesheet" type="text/css" href="../stylesheets/admin.css">
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  </head>
+
+  <body>
+
+    <header>
+      <!-- 塞個東西讓上面可以均分 -->
+      <div class="logo">
+        <a href=".././">
+          <img src="../imgs/logo.png" alt="logo">
+        </a>
+      </div>
+
+    </header>
+
+    <nav class="rwd-feature"></nav>
+
+    <main>
+
+      <div class="view">
+        <div class="heading">
+          <h1>Campaign 登錄後台</h1>
+          <div class="login">
+            <form class="form" action="/admin/campaign.html" method="POST" enctype="multipart/form-data">
+              <h2>產品基本資訊</h2>
+              <div class="form-group">
+                <label for="product_id">產品編號:</label>
+                <input type="number" class="form-control" name="product_id" id="product_id" required="required">
+              </div>
+              <div class="form-group">
+                <label for="story">產品故事:</label>
+                <textarea row="1" cols="24" type="text" class="form-control" name="story" id="story" required="required"></textarea>
+              </div>
+                <label for="images">產品圖片:</label>
+              <div class="form-group uploadImage">
+                <input type="file" class="form-control image" name="picture" id="picture" required="required">
+              </div>
+                <button type="submit" class="button" id="submit">Campaign 資訊登錄</button>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+
+
+    <footer>
+
+    </footer>
+
+  </body>
+
+</html>

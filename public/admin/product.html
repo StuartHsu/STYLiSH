@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>Management Page</title>      
+      <link rel="stylesheet" type="text/css" href="../stylesheets/admin.css">
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  </head>
+
+  <body>
+
+    <header>
+      <!-- 塞個東西讓上面可以均分 -->
+      <div class="logo">
+        <a href=".././">
+          <img src="../imgs/logo.png" alt="logo">
+        </a>
+      </div>
+
+    </header>
+
+    <nav class="rwd-feature"></nav>
+
+    <main>
+
+      <div class="view">
+        <div class="heading">
+          <h1>產品登錄後台</h1>
+
+          <div class="login">
+            <form class="form" action="/admin/product.html" method="POST" enctype="multipart/form-data">
+              <h2>產品基本資訊</h2>
+              <div class="form-group">
+                <label for="id">產品編號:</label>
+                <input type="number" class="form-control" name="id" id="id" required="required">
+              </div>
+              <div class="form-group">
+                <label for="title">產品名稱:</label>
+                <input type="text" class="form-control" name="title" id="title" required="required">
+              </div>
+              <div class="form-group">
+                <label for="description">產品簡述:</label>
+                <input type="text" class="form-control" name="description" id="description" required="required">
+              </div>
+              <div class="form-group">
+                <label for="price">產品價格:</label>
+                <input type="number" class="form-control" name="price" id="price" required="required">
+              </div>
+              <div class="form-group">
+                <label for="texture">產品材質:</label>
+                <input type="text" class="form-control" name="texture" id="texture">
+              </div>
+              <div class="form-group">
+                <label for="wash">洗滌方式:</label>
+                <input type="text" class="form-control" name="wash" id="wash">
+              </div>
+              <div class="form-group">
+                <label for="place">產品產地:</label>
+                <input type="text" class="form-control" name="place" id="place">
+              </div>
+              <div class="form-group">
+                <label for="note">產品備註:</label>
+                <input type="text" class="form-control" name="note" id="note">
+              </div>
+              <div class="form-group">
+                <label for="story">產品故事:</label>
+                <input type="text" class="form-control" name="story" id="story">
+              </div>
+
+              <div class="form-group">
+                <label for="category">產品類型:</label>
+                <select name="category">
+                    <option value="women">女裝</option>
+                    <option value="men">男裝</option>
+                    <option value="accessories">配件</option>
+                </select>
+                <!-- <input type="text" class="form-control" name="type" id="type" required="required"> -->
+              </div>
+              <div class="form-group">
+                <label for="campaign">促銷活動:</label>
+                <input type="text" class="form-control" name="campaign" id="campaign">
+              </div>
+
+                <label for="images">產品圖片:</label>
+              <div class="form-group uploadImage">
+                <input type="file" class="form-control image" name="images" id="images">
+                <input type="file" class="form-control image" name="images" id="images">
+                <input type="file" class="form-control image" name="images" id="images">
+              </div>
+                <button type="submit" class="button" id="submit">產品基本資訊登錄</button>
+
+            </form>
+
+          </div>
+
+          <div class="login variant">
+            <form class="form" action="/admin/product.html/variant" method="POST">
+            <h2>產品庫存資訊</h2>
+            <p>Sorry...search api 還沒完成，請自己記得資料庫有哪些已登錄產品編號</p>
+              <div class="form-group">
+                <label for="id">產品編號:</label>
+                <input type="number" class="form-control" name="id" id="id" required="required">
+              </div>
+              <div class="form-group">
+                <label for="size">產品尺寸:</label>
+                <select name="size">
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="S">S</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="color">產品顏色:</label>
+                <select name="color">
+                    <option value="白">白</option>
+                    <option value="黑">黑</option>
+                    <option value="紅">紅</option>
+                    <option value="藍">藍</option>
+                    <option value="綠">綠</option>
+                    <option value="黃">黃</option>
+                    <option value="粉">粉</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="stock">產品庫存:</label>
+                <input type="number" class="form-control" name="stock" id="stock" required="required">
+              </div>
+                <button type="submit" class="button" id="submit">產品庫存資訊登錄</button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+  </body>
+
+</html>
